@@ -1,0 +1,40 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<div class="container-fluid">
+  <h3> User Info </h3>
+  <div class="jumbotron">
+   <img class="img-circle" src={{u_details.avatar_url}} height="42" width="42"> &nbsp; &nbsp;
+   <b> {{u_details.name}} </b>
+   <table class="prof_table">
+     <tr>
+       <td class="details"><p class="user_detail"><b> Username </b></p></td>
+       <td><p class="clr_grey"> {{ u_details.login}} </p></td>
+     </tr>
+      <tr>
+       <td><p class="user_detail"><b> Location </b></p></td>
+       <td><p class="clr_grey"> {{u_details.location}} </p></td>
+     </tr>
+      <tr>
+       <td><p class="user_detail"><b> Company </b></p></td>
+       <td><p class="clr_grey"> {{u_details.company}} </p></td>
+     </tr>
+      <tr>
+       <td><p class="user_detail"><b> Blog Link </b></p></td>
+       <td><p class="clr_grey"> {{u_details.blog}} </p></td>
+     </tr>
+   </table>
+    <table class="prof_table">
+      <tr>
+        <td><p class="bottom_line1"> {{u_details.public_repos}} Public Repos</p></td>
+        <td><p class="bottom_line2"> {{u_details.followers}} Followers</p></td>
+        <td><p class="bottom_line3"> {{u_details.following}} Following</p></td>
+      </tr>
+   </table>
+     <a class="btn" [routerLink]="['/Userrepo',u_details.login]"> View Repo </a> 
+  </div>
+</div>
