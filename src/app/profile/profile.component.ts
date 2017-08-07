@@ -10,6 +10,11 @@ import { UserServiceService } from './../user-service.service';
 })
 export class ProfileComponent implements OnInit {
 
+  userName = "Username";
+  location = "Location";
+  company ="Company";
+  blog = "Blog Link";
+  
   u_name : String;
   u_details : any = {};
   show_repos : any = {};

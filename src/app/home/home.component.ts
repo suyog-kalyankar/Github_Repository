@@ -8,6 +8,7 @@ import { Observable } from 'rxjs/Observable';
 })
 export class HomeComponent implements OnInit{
 
+  userList = "Github Users";
   constructor(private userService: UserServiceService) { }
   users : Observable<any>;
   ngOnInit(){

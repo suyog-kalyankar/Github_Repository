@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   footer = "www.clairvoyantsoft.com";
+  home = "Home";
+  about = "About Us";
+  proj_name = "Githuber";
 }

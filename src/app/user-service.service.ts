@@ -7,19 +7,19 @@ import { definedConstants } from "definedConstants";
 @Injectable()
 export class UserServiceService {
 
-  constructor( private http:Http) { }
+  constructor( private http:Http, private definedConst : definedConstants) { }
 
   getUsers() {
-    return this.http.get(definedConstants.GITHUB_USERS_URL)
+    return this.http.get(this.definedConst.GITHUB_USERS_URL)
     .map((res:Response) => res.json());
   }
 
   getUserName(name : String){
-    return this.http.get(definedConstants.GITHUB_USERS_URL+"/"+name)
+    return this.http.get(this.definedConst.GITHUB_USERS_URL+"/"+name)
     .map((response : Response) => response.json());
   }
   getUserRepos(name : String){
-    return this.http.get(definedConstants.GITHUB_USERS_URL+"/"+name+"/"+"repos")
+    return this.http.get(this.definedConst.GITHUB_USERS_URL+"/"+name+"/"+"repos")
     .map((response : Response) => response.json());
   }
 }

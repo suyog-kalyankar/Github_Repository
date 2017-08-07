@@ -10,6 +10,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ReposComponent } from './repos/repos.component';
+import { definedConstants } from "definedConstants";
 const appRoutes: Routes = [
    { path: 'Home', component: HomeComponent },
   { path: 'About', component: AboutComponent },
@@ -32,7 +33,7 @@ const appRoutes: Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes),
   ],
-  providers: [ UserServiceService ],
+  providers: [ UserServiceService, definedConstants ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
