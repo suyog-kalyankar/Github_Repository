@@ -3,6 +3,11 @@
  
   <div class="container">
     <a><b> {{user.name}} </b></a>
+    <div *ngIf = "user.description">
     <p class="desc_clr"> {{user.description}} </p>
+    </div>
+    <div *ngIf = "!user.description">
+    <p class="desc_clr"> {{msg}} </p>
+    </div>
   </div>
   </div>

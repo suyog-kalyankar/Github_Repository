@@ -5,6 +5,7 @@
     margin-bottom: 10px;
     width: 100%;
     background-color: white;
+    padding: 0.7rem;
 }
 
 .card:hover {
@@ -15,4 +16,9 @@
 }
 .img-circle {
     border-radius: 50%;
+    height: 4%;
+    width: 4%;
+}
+.users{
+    text-align: center;
 }

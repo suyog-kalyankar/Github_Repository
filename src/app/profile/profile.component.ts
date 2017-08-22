@@ -10,6 +10,7 @@ import { UserServiceService } from './../user-service.service';
 })
 export class ProfileComponent implements OnInit {
 
+  notAvail = "NA";
   userName = "Username";
   location = "Location";
   company ="Company";
@@ -22,6 +23,10 @@ export class ProfileComponent implements OnInit {
   constructor(private activateRoute: ActivatedRoute, private userService: UserServiceService ) { }
 
   ngOnInit() {
+    this.getProfileDetails();
+  }
+
+  getProfileDetails(){
     let name = this.activateRoute.snapshot.params['name'];
     console.log("name is "+name);
     this.userService.getUserName(name).subscribe(data => this.u_details = data);

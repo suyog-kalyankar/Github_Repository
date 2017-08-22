@@ -9,11 +9,16 @@ import { UserServiceService } from './../user-service.service';
   styleUrls: ['./repos.component.css']
 })
 export class ReposComponent implements OnInit {
+  msg = "N/A";
   u_name : String;
    show_repos : Observable<any>;
   constructor(private userService:UserServiceService, private activateRoute: ActivatedRoute) {}
  
   ngOnInit() {
+    this.getUserRepos();
+  }
+
+  getUserRepos(){
     console.log("here in repo")
      let name = this.activateRoute.snapshot.params['name'];
      this.userService.getUserRepos(name).subscribe(data => this.show_repos = data);

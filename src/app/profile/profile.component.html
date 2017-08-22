@@ -4,23 +4,35 @@
   <div class="jumbotron card">
     <div class="container">
    <img class="img-circle" src={{u_details.avatar_url}} height="42" width="42"> &nbsp; &nbsp;
-   <b> {{u_details.name}} </b>
+  <b> {{u_details.name}} </b>
    <table class="prof_table">
      <tr>
        <td class="details"><p class="user_detail"><b> {{userName}} </b></p></td>
-       <td><p class="clr_grey"> {{ u_details.login}} </p></td>
+       <td><p class="clr_grey"> {{ u_details.login}} </p>
+       <div *ngIf="!u_details.login">
+        <p class="clr_grey"> {{notAvail}} </p>
+        </div></td>
      </tr>
       <tr>
        <td><p class="user_detail"><b> {{location}} </b></p></td>
-       <td><p class="clr_grey"> {{u_details.location}} </p></td>
+       <td><p class="clr_grey"> {{u_details.location}} </p>
+        <div *ngIf="!u_details.location">
+        <p class="clr_grey"> {{notAvail}} </p>
+        </div></td>
      </tr>
       <tr>
        <td><p class="user_detail"><b> {{company}} </b></p></td>
-       <td><p class="clr_grey"> {{u_details.company}} </p></td>
+       <td><p class="clr_grey"> {{u_details.company}} </p>
+        <div *ngIf="!u_details.company">
+        <p class="clr_grey"> {{notAvail}} </p>
+        </div></td>
      </tr>
       <tr>
        <td><p class="user_detail"><b> {{blog}} </b></p></td>
-       <td><p class="clr_grey"> {{u_details.blog}} </p></td>
+       <td><p class="clr_grey"> {{u_details.blog}} </p>
+        <div *ngIf="!u_details.blog">
+        <p class="clr_grey"> {{notAvail}} </p>
+        </div></td>
      </tr>
    </table>
     <table class="prof_table">

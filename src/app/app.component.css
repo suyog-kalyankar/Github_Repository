@@ -10,3 +10,11 @@
 .back_clr{
     background-color: lightblue;
 }
+.content{
+    margin-bottom:60px;
+     padding-top: 8rem;
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+}
